@@ -1,0 +1,29 @@
+<div class="conainer mt-3 shadow-lg p-3 mb-5  rounded">
+
+    <div *ngIf="msg">
+       <h1 class="alert alert-secondary">{{msg}}</h1>
+   </div> 
+
+<div class="card card-center bg-info col-md-6 offset-md-3">
+   <h1 class="card text-center mt-3  bg-secondary bg-opacity-75">Delete Customer</h1>
+
+<form id="form" (ngSubmit)="delete()">
+   <div class="col-md-12 offset-md-4">
+ 
+   <div class="form-group mb-3">
+      <label for="balance">Enter Id</label>
+      <br />
+      <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i> </div>
+         <input type="number" id="id" name="id" [(ngModel)]="id" placeholder="Enter Id"/>
+         </div>
+      </div>
+
+      
+   <button type="submit" class="btn btn-primary btn-space">Delete</button>
+   <button type="submit" class="btn btn-primary" routerLink="/admin">Back</button>
+   
+</div>
+</form>
+</div>
+</div>

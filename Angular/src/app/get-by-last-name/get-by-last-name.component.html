@@ -1,0 +1,66 @@
+<div class="conainer mt-3 shadow-lg p-3 mb-5  rounded">
+
+    <div *ngIf="msg">
+      <h1 class="alert alert-secondary text-center">{{msg}}</h1>
+  </div>
+  <div *ngIf="customers.length!==0">
+  <div class="container p-5 border shadow-lg ">
+   <div class="row shadow-lg bg-secondary">
+       <div class="col-md-6 offset-md-3 ">
+           <div class="card account-card">
+               <div class="card-header bg-info">
+                   <h3 class="card-title text-center">Customer Details</h3>
+               </div>
+               <div *ngFor="let customer of customers">
+               <div class="card-body">
+                   <dl class="row">
+                       <dt class="col-sm-4">Customer ID:</dt>
+                       <dd class="col-sm-8">{{customer.id}}</dd>
+
+                       <dt class="col-sm-4">Customer First Name:</dt>
+                       <dd class="col-sm-8">{{customer.firstName}}</dd>
+
+                       <dt class="col-sm-4">Customer Last Name:</dt>
+                       <dd class="col-sm-8">{{customer.lastName}}</dd>
+
+                       <dt class="col-sm-4">Customer Email:</dt>
+                       <dd class="col-sm-8">{{customer.email}}</dd>
+                       
+                       <dt class="col-sm-4">Customer Mobile Number:</dt>
+                       <dd class="col-sm-8">{{customer.mobileNumber}}</dd>
+
+                       <dt class="col-sm-4">Customer Age:</dt>
+                       <dd class="col-sm-8">{{customer.age}}</dd>
+                   </dl>
+               </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   </div>
+  </div>
+<!-- ***************************************************************** -->
+
+<div class="card card-center bg-info col-md-6 offset-md-3">
+  <h1 class="card text-center mt-3  bg-secondary bg-opacity-75">Find Customer using Last Name</h1>
+
+<form id="form" (ngSubmit)="getByLastName()">
+  <div class="col-md-12 offset-md-4">
+
+  <div class="form-group mb-3">
+     <label for="balance">Enter Last Name</label>
+     <br />
+     <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i> </div>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" placeholder="Enter Last Name"/>
+        </div>
+     </div>
+
+     
+  <button type="submit" class="btn btn-primary btn-space">find</button>
+  <button type="submit" class="btn btn-primary" routerLink="/admin">Back</button>
+  
+</div>
+</form>
+</div>
+</div>

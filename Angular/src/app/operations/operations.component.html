@@ -1,0 +1,36 @@
+<div class="row shadow-lg bg-Warning">
+    <div class="col-md-6 offset-md-3 ">
+        <div class="card account-card">
+            <div class="card-header bg-warning">
+                <h3 class="card-title text-center">Operations</h3>
+            </div>
+            <div class="card-body">
+                <form id="form" (ngSubmit)="submit()">
+                <label for="select">Select operation: </label>
+                <select id="operation-select" [(ngModel)]="selectedOp" name="select">
+                    <option [value]="getAll">Get All Customer Information</option>
+                    <option [value]="saveCustomer">Add Customer</option>
+                    <option [value]="update">Update Customer</option>
+                    <option [value]="deleteCustomer">Delete Customer</option>
+                    <option [value]="getById">Get Customer By Id</option>
+                    <option [value]="getByFirstName">Get Customer By First Name</option>
+                    <option [value]="getByLastName">Get Customer By Last Name</option>
+                    <option [value]="getByAge">Get Customer By Age</option>
+                    <option [value]="getByLessthanAge">Get Customer By Less Than Age</option>
+                    <option [value]="getByGreaterthanAge">Get Customer By Greater Than Age</option>
+                    <option [value]="getByEmail">Get Customer By Email</option>
+                    <option [value]="updateFirstName">Update Customer's First Name</option>
+                    <option [value]="updateLastName">Update Customer's Last Name</option>
+                    <option [value]="updateEmail">Update Customer's Email</option>
+                    <option [value]="updateMobile">Update Customer's Mobile Number</option>
+                    <option [value]="updateAge">Update Customer's Age</option>
+                    <option [value]="getAllFirstNames">Get First Name's of All Customer's</option>
+                  </select>
+                <button type="submit" class="btn btn-primary btn-space col-md-3 offset-md-3">Perform</button>
+                    
+            </form>
+            </div>
+            
+        </div>
+    </div>
+</div>

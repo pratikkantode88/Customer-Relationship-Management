@@ -1,0 +1,40 @@
+<div class="conainer mt-3 shadow-lg p-3 mb-5  rounded">
+
+    <div *ngIf="customerUpdated">
+       <h1 class="alert alert-success text-center">{{customerUpdated}}</h1>
+   </div> 
+
+<div class="card card-center bg-info col-md-6 offset-md-3">
+   <h1 class="card text-center mt-3  bg-secondary bg-opacity-75">Add Customer's Id And Age</h1>
+
+<form id="form" (ngSubmit)="updateAge()">
+   <div class="col-md-12 offset-md-4">
+   <div class="form-group mb-3 ">
+
+      <div>
+      <label for="name">Id</label>
+      <br />
+      <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>
+         <input type="number" id="id" name="id" [(ngModel)]="id" placeholder="Enter Id "/>
+      </div>
+      </div>
+      
+      <div>
+      <label for="name">Age</label>
+      <br />
+      <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>
+         <input type="number" id="age" name="age" [(ngModel)]="age" placeholder="Enter Age "/>
+         </div>
+      </div>
+
+
+   <button type="submit" class="btn btn-primary btn-space">Update</button>
+   <button type="submit" class="btn btn-primary" routerLink="/admin">Back</button>
+   
+</div>
+      </div>
+</form>
+</div>
+</div>

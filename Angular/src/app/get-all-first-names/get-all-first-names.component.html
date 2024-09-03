@@ -1,0 +1,29 @@
+<div class="conainer mt-3 shadow-lg p-3 mb-5 bg-warning rounded">
+
+    <div *ngIf="msg">
+      <h1 class="alert alert-secondary text-center">{{msg}}</h1>
+  </div>
+  <div *ngIf="firstNames.length!==0">
+  <div class="container p-5 border bg-danger shadow-lg ">
+   <div class="row shadow-lg ">
+       <div class="col-md-6 offset-md-3 ">
+           <div class="card account-card">
+               <div class="card-header bg-info">
+                   <h3 class="card-title text-center">Customer's First Name</h3>
+               </div>
+               <div *ngFor="let firstName of firstNames">
+               <div class="card-body">
+                   
+                    <div class="card">
+                       <h2 class="text-center shadow-lg">{{firstName}}</h2>
+                    </div>
+                   
+               </div>
+               </div>
+               <button type="submit" class="btn btn-primary" routerLink="/admin">Back</button>
+           </div>
+       </div>
+   </div>
+   </div>
+  </div>
+</div>
